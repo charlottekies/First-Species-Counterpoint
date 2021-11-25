@@ -1,0 +1,12 @@
+Changes to hasOneApex or changes to illegal leap (to include tritone and leaps of 7ths) caused melodies that start on 12 to repeat 11 and 12 a LOT
+idea... create a constructor that allows you to set the first and last notes
+debug it
+watch what happens to see why you get stuck at 11 and 12
+Replace illegal apex is causing an index-1 out of bounds exception.
+
+
+
+Removed "illegal apex" mode (commented out)
+restored hasOneApex to previous version
+hasOneApex isn't working for when -5 is the lowest note and 0 is the starting note. some simple condition like, -5 can never repeat. And another one like, 12 can only happen once in the middle.
+Still need to find a way to make sure that 2 is never the lowest note.
